@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Juris Sentinel — Verified Attorney Appointment Platform</title>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            50: '#f0f4f8',
+                            100: '#d9e2ec',
+                            800: '#1e293b',
+                            900: '#0f172a',
+                            950: '#0b0f19',
+                        },
+                        accent: {
+                            blue: '#2563eb',
+                            gold: '#d97706',
+                            emerald: '#059669',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 font-sans antialiased text-slate-800 overflow-x-hidden selection:bg-blue-600 selection:text-white">
+
+    <!-- Top Navigation Bar -->
+    <header class="bg-navy-950 border-b border-slate-800 text-white sticky top-0 z-50 px-4 sm:px-6 lg:px-8 py-3.5 sm:py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Brand -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white text-base sm:text-lg font-bold shadow-md shadow-blue-900/40 flex-shrink-0">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-base sm:text-lg tracking-tight block leading-tight">Juris Sentinel</span>
+                    <span class="block text-[9px] sm:text-[10px] text-slate-400 uppercase tracking-widest font-medium">Lawyer Appointment Portal</span>
+                </div>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden lg:flex items-center gap-6 text-sm font-semibold text-slate-300">
+                <a href="#home" class="text-white hover:text-blue-400 transition">Home</a>
+                <a href="#specializations" class="hover:text-blue-400 transition">Specializations</a>
+                <a href="#attorneys" class="hover:text-blue-400 transition">Find Attorneys</a>
+                <a href="#how-it-works" class="hover:text-blue-400 transition">How It Works</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </nav>
+
+            <!-- Action Buttons & Mobile Hamburger -->
+            <div class="flex items-center gap-2 sm:gap-3">
+                <button class="hidden sm:inline-flex text-xs font-semibold px-3.5 py-2 rounded-lg border border-slate-700 hover:bg-navy-900 text-slate-200 transition">Lawyer Login</button>
+                <button class="text-xs font-bold px-3.5 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white shadow-sm shadow-blue-600/30 transition">Book Consultation</button>
+                
+                <!-- Mobile Hamburger Button -->
+                <button id="mobileMenuBtn" aria-label="Toggle navigation menu" class="lg:hidden w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 flex items-center justify-center hover:text-white transition">
+                    <i class="fa-solid fa-bars text-sm" id="menuIcon"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Navigation -->
+        <div id="mobileDrawer" class="hidden lg:hidden pt-4 pb-2 border-t border-slate-800/80 mt-3 flex-col gap-2">
+            <a href="#home" class="block px-3 py-2 rounded-lg text-sm font-semibold text-white bg-slate-900">Home</a>
+            <a href="#specializations" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/60">Specializations</a>
+            <a href="#attorneys" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/60">Find Attorneys</a>
+            <a href="#how-it-works" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/60">How It Works</a>
+            <a href="#contact" class="block px-3 py-2 rounded-lg text-sm font-semibold text-slate-300 hover:text-white hover:bg-slate-900/60">Contact</a>
+            <div class="pt-2 border-t border-slate-800 flex flex-col gap-2 mt-1 sm:hidden">
+                <button class="w-full text-center text-xs font-semibold py-2.5 rounded-lg border border-slate-700 text-slate-200">Lawyer Login</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-navy-950 text-white relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        <!-- Background Ambient Glows -->
+        <div class="absolute -top-20 -left-20 sm:-top-40 sm:-left-40 w-72 sm:w-96 h-72 sm:h-96 bg-blue-600/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute -bottom-20 -right-20 sm:-bottom-40 sm:-right-40 w-72 sm:w-96 h-72 sm:h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-5xl mx-auto text-center relative z-10">
+            <!-- Trust Pill Badge -->
+            <div class="inline-flex items-center gap-2 bg-navy-900 border border-slate-700/80 rounded-full px-3.5 py-1 sm:px-4 sm:py-1.5 mb-5 sm:mb-6 text-[11px] sm:text-xs text-slate-300 font-medium shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse flex-shrink-0"></span>
+                <span>Verified Attorney Appointment Platform</span>
+            </div>
+
+            <h1 class="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight mb-3 sm:mb-4 leading-tight sm:leading-tight">
+                Find &amp; Book Trusted <br class="hidden sm:inline"> Legal Representation
+            </h1>
+            <p class="text-slate-300 text-xs sm:text-sm md:text-base max-w-2xl mx-auto mb-6 sm:mb-8 leading-relaxed">
+                Search top-rated attorneys by specialization and city. View real-time availability slots and schedule your consultation in minutes.
+            </p>
+
+            <!-- Search Bar Card (Fully Responsive for Mobile, Tablet, Desktop) -->
+            <div class="bg-white rounded-xl sm:rounded-2xl shadow-2xl p-4 sm:p-5 text-slate-800 max-w-4xl mx-auto border border-slate-200">
+                <form onsubmit="event.preventDefault();" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-left">
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Legal Service</label>
+                        <div class="relative">
+                            <select class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none transition">
+                                <option>Corporate &amp; Business</option>
+                                <option>Criminal Defense</option>
+                                <option>Family &amp; Divorce</option>
+                                <option>Civil Litigation</option>
+                                <option>Tax &amp; Financial Law</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Location / City</label>
+                        <div class="relative">
+                            <input type="text" value="Karachi, Sindh" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none transition">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-[11px] font-bold uppercase text-slate-500 mb-1 tracking-wider">Consultation Date</label>
+                        <div class="relative">
+                            <input type="date" value="2026-10-25" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2.5 text-xs sm:text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-blue-600 focus:outline-none transition">
+                        </div>
+                    </div>
+                    <div class="flex items-end sm:col-span-2 lg:col-span-1">
+                        <button type="button" class="w-full bg-blue-600 hover:bg-navy-900 text-white font-bold py-2.5 px-4 rounded-lg text-xs sm:text-sm transition shadow-sm flex items-center justify-center gap-2 h-[42px]">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <span>Search Lawyers</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Stats Ribbon -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-8 sm:mt-10 pt-6 border-t border-slate-800/60 text-slate-300 text-center">
+                <div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">450+</div>
+                    <div class="text-[11px] text-slate-400 uppercase tracking-wider">Verified Lawyers</div>
+                </div>
+                <div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">98.4%</div>
+                    <div class="text-[11px] text-slate-400 uppercase tracking-wider">Satisfaction Rate</div>
+                </div>
+                <div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">12,500+</div>
+                    <div class="text-[11px] text-slate-400 uppercase tracking-wider">Consultations</div>
+                </div>
+                <div>
+                    <div class="text-xl sm:text-2xl font-extrabold text-white">18+</div>
+                    <div class="text-[11px] text-slate-400 uppercase tracking-wider">Legal Domains</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legal Specialization Practice Areas -->
+    <section id="specializations" class="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div class="text-center mb-8 sm:mb-12">
+            <span class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-1 block">Practice Areas</span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy-900 tracking-tight">Legal Specialization Categories</h2>
+            <p class="text-slate-500 text-xs sm:text-sm mt-2 max-w-xl mx-auto">Select your required legal domain to discover certified, high-court &amp; supreme-court legal counsel.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6">
+            <!-- Practice Card 1 -->
+            <div class="bg-white rounded-xl p-5 sm:p-6 border border-slate-200 hover:border-blue-600 shadow-sm hover:shadow-md transition group">
+                <div class="w-11 h-11 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg mb-4 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3 class="font-bold text-base sm:text-lg text-navy-900 mb-1.5">Criminal Defense</h3>
+                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed mb-4">Expert courtroom defense, bail procedures, trial litigation, and criminal appeals.</p>
+                <a href="#" class="text-xs font-semibold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition">
+                    <span>Explore 42 Lawyers</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Practice Card 2 -->
+            <div class="bg-white rounded-xl p-5 sm:p-6 border border-slate-200 hover:border-blue-600 shadow-sm hover:shadow-md transition group">
+                <div class="w-11 h-11 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-lg mb-4 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-building-columns"></i>
+                </div>
+                <h3 class="font-bold text-base sm:text-lg text-navy-900 mb-1.5">Corporate &amp; Tax</h3>
+                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed mb-4">Company registration, commercial contracts, tax compliance, and mergers.</p>
+                <a href="#" class="text-xs font-semibold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition">
+                    <span>Explore 38 Lawyers</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Practice Card 3 -->
+            <div class="bg-white rounded-xl p-5 sm:p-6 border border-slate-200 hover:border-blue-600 shadow-sm hover:shadow-md transition group">
+                <div class="w-11 h-11 rounded-xl bg-purple-50 text-purple-600 flex items-center justify-center text-lg mb-4 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <h3 class="font-bold text-base sm:text-lg text-navy-900 mb-1.5">Civil Litigation</h3>
+                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed mb-4">Property disputes, inheritance rights, contract breaches, and recovery claims.</p>
+                <a href="#" class="text-xs font-semibold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition">
+                    <span>Explore 29 Lawyers</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+
+            <!-- Practice Card 4 -->
+            <div class="bg-white rounded-xl p-5 sm:p-6 border border-slate-200 hover:border-blue-600 shadow-sm hover:shadow-md transition group">
+                <div class="w-11 h-11 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg mb-4 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-file-contract"></i>
+                </div>
+                <h3 class="font-bold text-base sm:text-lg text-navy-900 mb-1.5">Affidavit &amp; Notary</h3>
+                <p class="text-slate-500 text-xs sm:text-sm leading-relaxed mb-4">Document attestations, legal notices, sworn affidavits, and registry verifications.</p>
+                <a href="#" class="text-xs font-semibold text-blue-600 flex items-center gap-1 group-hover:gap-2 transition">
+                    <span>Explore 19 Lawyers</span>
+                    <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Verified Attorneys Section (Responsive Cards) -->
+    <section id="attorneys" class="bg-slate-100 py-12 sm:py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-8 sm:mb-10 gap-3">
+                <div>
+                    <span class="text-xs font-bold uppercase tracking-wider text-blue-600 mb-1 block">Featured Legal Counsel</span>
+                    <h2 class="text-2xl sm:text-3xl font-extrabold text-navy-900 tracking-tight">Top-Rated Verified Attorneys</h2>
+                </div>
+                <a href="#" class="text-xs sm:text-sm font-bold text-blue-600 hover:text-navy-900 flex items-center gap-1.5 transition">
+                    <span>View All Attorneys</span>
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
+                <!-- Attorney Card 1 -->
+                <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-sm shadow-inner flex-shrink-0">
+                                SK
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-navy-900 leading-tight">Adv. Salman Khan</h3>
+                                <div class="text-xs text-blue-600 font-semibold">Corporate &amp; Tax Law</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5"><i class="fa-solid fa-location-dot mr-1"></i>Karachi High Court</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4">
+                            <div><i class="fa-solid fa-briefcase text-blue-600 mr-1.5"></i>12+ Years Exp.</div>
+                            <div><i class="fa-solid fa-star text-amber-500 mr-1"></i>4.9 (124 reviews)</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                        <button class="flex-1 py-2 px-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition text-center">
+                            Book Slot
+                        </button>
+                        <button class="py-2 px-3 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition">
+                            Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Attorney Card 2 -->
+                <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-sm shadow-inner flex-shrink-0">
+                                AR
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-navy-900 leading-tight">Adv. Ayesha Rehman</h3>
+                                <div class="text-xs text-indigo-600 font-semibold">Civil &amp; Family Law</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5"><i class="fa-solid fa-location-dot mr-1"></i>Lahore District Courts</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4">
+                            <div><i class="fa-solid fa-briefcase text-blue-600 mr-1.5"></i>9+ Years Exp.</div>
+                            <div><i class="fa-solid fa-star text-amber-500 mr-1"></i>4.8 (98 reviews)</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                        <button class="flex-1 py-2 px-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition text-center">
+                            Book Slot
+                        </button>
+                        <button class="py-2 px-3 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition">
+                            Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Attorney Card 3 -->
+                <div class="bg-white rounded-xl border border-slate-200 p-5 shadow-sm hover:shadow-md transition flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+                    <div>
+                        <div class="flex items-center gap-3.5 mb-4">
+                            <div class="w-12 h-12 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-sm shadow-inner flex-shrink-0">
+                                MT
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-base text-navy-900 leading-tight">Adv. Mansoor Tariq</h3>
+                                <div class="text-xs text-emerald-600 font-semibold">Criminal Defense</div>
+                                <div class="text-[11px] text-slate-400 mt-0.5"><i class="fa-solid fa-location-dot mr-1"></i>Islamabad High Court</div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-slate-600 bg-slate-50 p-2.5 rounded-lg mb-4">
+                            <div><i class="fa-solid fa-briefcase text-blue-600 mr-1.5"></i>15+ Years Exp.</div>
+                            <div><i class="fa-solid fa-star text-amber-500 mr-1"></i>5.0 (180 reviews)</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 pt-2 border-t border-slate-100">
+                        <button class="flex-1 py-2 px-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold text-xs transition text-center">
+                            Book Slot
+                        </button>
+                        <button class="py-2 px-3 rounded-lg border border-slate-300 hover:bg-slate-50 text-slate-700 font-semibold text-xs transition">
+                            Profile
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Responsive Footer -->
+    <footer class="bg-navy-950 text-white border-t border-slate-800 py-10 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+            <div class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center text-white text-sm font-bold">
+                    <i class="fa-solid fa-scale-balanced"></i>
+                </div>
+                <div>
+                    <span class="font-bold text-base">Juris Sentinel</span>
+                    <span class="block text-[10px] text-slate-400">Verified Legal Ecosystem</span>
+                </div>
+            </div>
+            <div class="flex flex-wrap justify-center gap-5 text-xs text-slate-400">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+                <a href="#" class="hover:text-white transition">Lawyer Verification</a>
+                <a href="#" class="hover:text-white transition">Client Support</a>
+            </div>
+            <div class="text-xs text-slate-500">
+                &copy; 2026 Juris Sentinel. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive script for mobile hamburger toggle -->
+    <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const menuIcon = document.getElementById('menuIcon');
+
+        if (mobileMenuBtn && mobileDrawer) {
+            mobileMenuBtn.addEventListener('click', () => {
+                const isHidden = mobileDrawer.classList.contains('hidden');
+                if (isHidden) {
+                    mobileDrawer.classList.remove('hidden');
+                    mobileDrawer.classList.add('flex');
+                    menuIcon.classList.remove('fa-bars');
+                    menuIcon.classList.add('fa-xmark');
+                } else {
+                    mobileDrawer.classList.add('hidden');
+                    mobileDrawer.classList.remove('flex');
+                    menuIcon.classList.remove('fa-xmark');
+                    menuIcon.classList.add('fa-bars');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

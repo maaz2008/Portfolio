@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Maaz — Full Stack Web Developer | Portfolio</title>
+    
+    <!-- SEO Metadata -->
+    <meta name="description" content="Personal portfolio of Muhammad Maaz, a Full Stack Web Developer specializing in responsive frontend interfaces, PHP, Laravel, MySQL database architectures, and AI applications.">
+    <meta name="keywords" content="Muhammad Maaz, Full Stack Developer, Web Developer Karachi, PHP, Laravel, MySQL, JavaScript, HTML5, CSS3, Portfolio">
+    <meta name="author" content="Muhammad Maaz">
+    <meta name="theme-color" content="#080B12">
+
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Muhammad Maaz — Full Stack Web Developer">
+    <meta property="og:description" content="Turning ideas into elegant, responsive, and functional digital experiences. Explore my projects, skills, and revolving technology ecosystem.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/profile.jpg">
+
+    <!-- Favicon MM Monogram -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' stop-color='%2338BDF8'/><stop offset='100%' stop-color='%238B5CF6'/></linearGradient></defs><rect width='100' height='100' rx='25' fill='%23080B12'/><rect x='4' y='4' width='92' height='92' rx='21' fill='none' stroke='url(%23g)' stroke-width='4'/><text x='50%' y='63%' font-family='Arial, sans-serif' font-weight='900' font-size='46' fill='url(%23g)' text-anchor='middle'>MM</text></svg>">
+
+    <!-- Google Fonts: Space Grotesk & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Portfolio Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ======================================================================
+         1. Sticky Navigation Bar
+         ====================================================================== -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="nav-logo" aria-label="Muhammad Maaz — Return to top">
+                <div class="monogram-badge">MM</div>
+                <div class="nav-logo-text">
+                    <span class="nav-logo-name">Muhammad Maaz</span>
+                    <span class="nav-logo-role">Full Stack Developer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#services" class="nav-link">Services</a>
+                
+                <a href="#workflow" class="nav-link">Workflow</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary nav-cta">Let's Connect</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ======================================================================
+         2. Hero Section — Signature Revolving Orbit Animation
+         ====================================================================== -->
+    <section class="hero-section" id="home">
+        <div class="container">
+            <div class="hero-grid">
+                
+                <!-- Left: Hero Introduction -->
+                <div class="hero-content">
+                    <div class="hero-greeting reveal-up scroll-parallax-item" data-speed="0.04">
+                        <span class="hero-greeting-pulse"></span>
+                        HELLO, I'M
+                    </div>
+                    <h1 class="hero-name reveal-up reveal-delay-1 scroll-parallax-item" data-speed="0.08">Muhammad Maaz</h1>
+                    <h2 class="hero-title reveal-up reveal-delay-2 scroll-parallax-item" data-speed="0.06">Full Stack Web Developer</h2>
+                    <p class="hero-subtitle reveal-up reveal-delay-3 scroll-parallax-item" data-speed="0.05">Turning ideas into elegant, responsive, and functional digital experiences.</p>
+                    <p class="hero-bio reveal-up reveal-delay-4">
+                        I build modern web applications by combining creative frontend interfaces with robust backend functionality and database integration. I'm passionate about learning, solving problems, and transforming ideas into practical digital products.
+                    </p>
+
+                    <div class="hero-ctas reveal-up reveal-delay-5">
+                        <a href="#projects" class="btn btn-primary">
+                            Explore My Projects
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            Let's Connect
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="hero-badges reveal-up reveal-delay-6">
+                        <div class="hero-badge-item">
+                            <div class="hero-badge-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            </div>
+                            <div class="hero-badge-info">
+                                <h4>Full Stack</h4>
+                                <p>Frontend &amp; Backend</p>
+                            </div>
+                        </div>
+                        <div class="hero-badge-item">
+                            <div class="hero-badge-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                            </div>
+                            <div class="hero-badge-info">
+                                <h4>10 Core Techs</h4>
+                                <p>In Active Revolving Orbit</p>
+
+                                
+                            </div>
+                        </div>
+                        <div class="hero-badge-item">
+                            <div class="hero-badge-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
+                            </div>
+                            <div class="hero-badge-info">
+                                <h4>Karachi, PK</h4>
+                                <p>Open for Opportunities</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: The Signature Orbit Stage -->
+                <div class="hero-orbit-column">
+                    <div class="hero-orbit-stage" id="heroOrbitStage" aria-label="Interactive animated orbit of 10 technology icons revolving around Muhammad Maaz's profile photograph">
+                        
+                        <!-- Ambient backlight glow -->
+                        <div class="orbit-ambient-glow"></div>
+
+                        <!-- Inner Orbit Track Ring (Frontend: HTML5, CSS3, JS, Bootstrap, jQuery) -->
+                        <div class="orbit-track orbit-track-inner"></div>
+                        <div class="orbit-ring-rotator orbit-ring-inner" id="orbitInnerRotator">
+                            <!-- Injected dynamically via js/main.js with counter-rotation -->
+                        </div>
+
+                        <!-- Outer Orbit Track Ring (Backend & Tooling: PHP, Laravel, MySQL, XAMPP, GitHub) -->
+                        <div class="orbit-track orbit-track-outer"></div>
+                        <div class="orbit-ring-rotator orbit-ring-outer" id="orbitOuterRotator">
+                            <!-- Injected dynamically via js/main.js with counter-rotation -->
+                        </div>
+
+                        <!-- Central Portrait Unit -->
+                        <div class="orbit-center-portrait">
+                            <div class="portrait-glow-ring"></div>
+                            <div class="portrait-frame">
+                                <div class="portrait-inner">
+                                    <!-- Replaceable at assets/images/profile.jpg -->
+                                    <img src="assets/images/profile.jpg" alt="Muhammad Maaz — Full Stack Web Developer" class="portrait-img" loading="eager">
+                                </div>
+                            </div>
+                            <div class="portrait-status-badge">
+                                <span class="portrait-status-dot"></span>
+                                Available
+                            </div>
+                        </div>
+
+                        <!-- Orbit Motion Control -->
+                        <div class="orbit-control-bar">
+                            <span>Orbit Motion:</span>
+                            <button class="orbit-toggle-btn" id="toggleOrbitBtn" aria-label="Pause or resume orbit animation" aria-pressed="false">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/></svg>
+                                Pause Orbit
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Subtle Scroll Down Indicator -->
+        <a href="#about" class="hero-scroll-indicator" aria-label="Scroll down to About section">
+            <div class="scroll-mouse">
+                <span class="scroll-wheel"></span>
+            </div>
+            <span>Scroll Down</span>
+        </a>
+    </section>
+
+    <!-- ======================================================================
+         3. About Me Section
+         ====================================================================== -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    About Me
+                </span>
+                <h2 class="section-title reveal-up reveal-delay-1 parallax-heading">Passionate About Crafting <span class="gradient-text">Impactful Web Solutions</span></h2>
+                <p class="section-desc reveal-up reveal-delay-2">Get to know my background, training, technical interests, and aspirations as a Full Stack Web Developer.</p>
+            </div>
+
+            <div class="about-grid">
+                
+                <!-- Left Column: Professional Narrative & Highlights -->
+                <div class="about-left">
+                    <div class="about-intro-card glass-panel reveal-up">
+                        <p class="about-lead">
+                            I am an aspiring Full Stack Web Developer based in Karachi, Pakistan, with hands-on experience building responsive websites using HTML5, CSS3, JavaScript, jQuery, Bootstrap, PHP, and Laravel.
+                        </p>
+                        <p style="margin-bottom: 24px; color: var(--text-secondary); line-height: 1.7;">
+                            My development journey is driven by curiosity, systematic problem-solving, and a focus on crafting practical digital products. Whether designing intuitive frontend user interfaces or structuring relational MySQL databases with Laravel backends, I emphasize clean code, responsive layouts, and reliable performance.
+                        </p>
+                        
+                        <div class="about-highlights-grid">
+                            <div class="about-highlight-box reveal-up reveal-delay-1">
+                                <div class="highlight-title">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                                    Frontend Craft
+                                </div>
+                                <p class="highlight-text">Clean, responsive interfaces using HTML5, CSS3, JavaScript, and Bootstrap.</p>
+                            </div>
+                            <div class="about-highlight-box reveal-up reveal-delay-2">
+                                <div class="highlight-title">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/></svg>
+                                    Backend Core
+                                </div>
+                                <p class="highlight-text">Server-side logic and MVC architecture with PHP and Laravel frameworks.</p>
+                            </div>
+                            <div class="about-highlight-box reveal-up reveal-delay-3">
+                                <div class="highlight-title">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/></svg>
+                                    Database Systems
+                                </div>
+                                <p class="highlight-text">Structured schema modeling, SQL queries, and CRUD management with MySQL.</p>
+                            </div>
+                            <div class="about-highlight-box reveal-up reveal-delay-4">
+                                <div class="highlight-title">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20"/></svg>
+                                    AI-Assisted Work
+                                </div>
+                                <p class="highlight-text">Leveraging AI tools and APIs to accelerate research, prototyping, and workflows.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Tabs (Education, Certifications, Interests, Goals) -->
+                <div class="about-right">
+                    <div class="about-tabs-container glass-panel reveal-up reveal-delay-2">
+                        <div class="about-tab-buttons" role="tablist">
+                            <button class="about-tab-btn active" data-tab="tab-education" role="tab" aria-selected="true">Education</button>
+                            <button class="about-tab-btn" data-tab="tab-certifications" role="tab" aria-selected="false">Certifications</button>
+                            <button class="about-tab-btn" data-tab="tab-interests" role="tab" aria-selected="false">Interests &amp; Goals</button>
+                        </div>
+
+                        <!-- Tab 1: Education -->
+                        <div class="about-tab-pane active" id="tab-education" role="tabpanel">
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-badge">2024 — 2026 (Expected)</span>
+                                <h3 class="timeline-title">Intermediate (Pre-Engineering)</h3>
+                                <p class="timeline-meta">GDBC Gulistan-e-Johar No. 1 — Karachi Board</p>
+                                <p class="timeline-desc">Focused on analytical reasoning, mathematical models, physics principles, and systematic problem solving.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-badge">2022 — 2024</span>
+                                <h3 class="timeline-title">Matriculation (Science Group)</h3>
+                                <p class="timeline-meta">CAA Model School-2 — Karachi Board</p>
+                                <p class="timeline-desc">Comprehensive grounding in scientific inquiry, mathematics, and computer science fundamentals.</p>
+                            </div>
+                        </div>
+
+                        <!-- Tab 2: Certifications -->
+                        <div class="about-tab-pane" id="tab-certifications" role="tabpanel">
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-badge" style="background: rgba(139, 92, 246, 0.15); color: var(--purple);">Currently Enrolled</span>
+                                <h3 class="timeline-title">ACCP AI (Aptech Certified Computer Professional in AI)</h3>
+                                <p class="timeline-meta">Aptech Computer Education</p>
+                                <p class="timeline-desc">Intensive professional training in software engineering, full stack development, and AI application workflows.</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <span class="timeline-badge">Completed</span>
+                                <h3 class="timeline-title">Certification in Graphic Designing</h3>
+                                <p class="timeline-meta">Kent Institute of Information Technology</p>
+                                <p class="timeline-desc">Training in UI layout principles, color theory, typography, and visual brand identity design.</p>
+                            </div>
+                        </div>
+
+                        <!-- Tab 3: Interests & Goals -->
+                        <div class="about-tab-pane" id="tab-interests" role="tabpanel">
+                            <h4 style="font-size: 0.9375rem; margin-bottom: 12px; color: var(--electric-blue);">Development Interests</h4>
+                            <ul style="margin-bottom: 20px; font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.8;">
+                                <li>• Building fully responsive websites and fluid mobile-first layouts</li>
+                                <li>• Developing robust Laravel web applications with clean MVC architecture</li>
+                                <li>• Designing optimized MySQL relational database schemas &amp; CRUD operations</li>
+                                <li>• Creating interactive, accessible UI components with vanilla JavaScript</li>
+                            </ul>
+                            <h4 style="font-size: 0.9375rem; margin-bottom: 8px; color: var(--purple);">Career Goals</h4>
+                            <p style="font-size: 0.8125rem; color: var(--text-secondary); line-height: 1.6;">
+                                To secure an internship or entry-level web developer role where I can actively contribute to real-world projects, master enterprise web architectures, and grow into a versatile full stack software engineer.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Facts Card -->
+                    <div class="quick-facts-card glass-panel reveal-up reveal-delay-3">
+                        <h4 class="quick-facts-title">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                            Key Information
+                        </h4>
+                        <div class="fact-row">
+                            <span class="fact-label">Location</span>
+                            <span class="fact-value">Karachi, Pakistan</span>
+                        </div>
+                        <div class="fact-row">
+                            <span class="fact-label">Status</span>
+                            <span class="fact-value" style="color: #10B981;">Open for Internships &amp; Roles</span>
+                        </div>
+                        <div class="fact-row">
+                            <span class="fact-label">Languages</span>
+                            <span class="fact-value">English, Urdu</span>
+                        </div>
+                        <div class="fact-row">
+                            <span class="fact-label">GitHub</span>
+                            <a href="https://github.com/maaz2008" target="_blank" rel="noopener noreferrer" class="fact-value" style="color: var(--electric-blue);">github.com/maaz2008</a>
+                        </div>
+                        <div class="fact-row">
+                            <span class="fact-label">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/muhammad-maaz-283559367" target="_blank" rel="noopener noreferrer" class="fact-value" style="color: var(--electric-blue);">muhammad-maaz-283559367</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         4. Skills & Technologies Section
+         ====================================================================== -->
+    <section class="skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+                    Skills &amp; Technologies
+                </span>
+                <h2 class="section-title reveal-up reveal-delay-1 parallax-heading">Core <span class="gradient-text">Technical Stack</span></h2>
+                <p class="section-desc reveal-up reveal-delay-2">My 10 foundational technologies with authentic brand icons and clear technical descriptions.</p>
+            </div>
+
+            <!-- Filter Categories -->
+            <div class="skills-filter reveal-up reveal-delay-3">
+                <button class="filter-btn active" data-filter="all">All (10)</button>
+                <button class="filter-btn" data-filter="frontend">Frontend (5)</button>
+                <button class="filter-btn" data-filter="backend">Backend (2)</button>
+                <button class="filter-btn" data-filter="tools">Database &amp; Tools (3)</button>
+            </div>
+
+            <!-- Skills Grid (Injected via js/main.js) -->
+            <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         5. Featured Projects Section
+         ====================================================================== -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+                    Featured Work
+                </span>
+                <h2 class="section-title reveal-up reveal-delay-1 parallax-heading">Demonstrated <span class="gradient-text">Project Portfolio</span></h2>
+                <p class="section-desc reveal-up reveal-delay-2">Real applications showcasing full stack development, database integration, responsive design, and AI capabilities.</p>
+            </div>
+
+            <!-- Projects Showcase (Injected via js/main.js) -->
+            <div class="projects-container" id="projectsContainer"></div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         6. Services Section
+         ====================================================================== -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+                    Services
+                </span>
+                <h2 class="section-title reveal-up reveal-delay-1 parallax-heading">What I Can <span class="gradient-text">Build For You</span></h2>
+                <p class="section-desc reveal-up reveal-delay-2">Key technical capabilities and web development services I offer to organizations, clients, and teams.</p>
+            </div>
+
+            <div class="services-grid" id="servicesGrid"></div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         7. Development Workflow Section
+         ====================================================================== -->
+    <section class="workflow-section" id="workflow">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    Process
+                </span>
+                <h2 class="section-title reveal-up reveal-delay-1 parallax-heading">My Development <span class="gradient-text">Workflow</span></h2>
+                <p class="section-desc reveal-up reveal-delay-2">A structured 5-step methodology ensuring every web project is planned, executed, and refined effectively.</p>
+            </div>
+
+            <div class="workflow-timeline" id="workflowTimeline"></div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         8. Contact Section
+         ====================================================================== -->
+    <section class="contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag reveal-up">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    Get in Touch
+                </span>
+                <h2 class="section-title reveal-up reveal-delay-1 parallax-heading">Have a project in mind?</h2>
+                <p class="section-desc reveal-up reveal-delay-2">Let's connect and turn your ideas into something meaningful.</p>
+            </div>
+
+            <div class="contact-grid">
+                
+                <!-- Left: Channels & Copy Email -->
+                <div class="contact-info-panel glass-panel reveal-up">
+                    <h3 class="contact-info-title">Let's build together</h3>
+                    <p class="contact-info-desc">
+                        I am currently available for internships, freelance projects, and full stack developer roles. Feel free to reach out directly through any of the channels below.
+                    </p>
+
+                    <div class="contact-channels">
+                        <div class="contact-channel-item">
+                            <div class="channel-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            </div>
+                            <div class="channel-meta">
+                                <h4>Email</h4>
+                                <a href="mailto:maaazz714@gmail.com">maaazz714@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-channel-item">
+                            <div class="channel-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                            </div>
+                            <div class="channel-meta">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/maaz2008" target="_blank" rel="noopener noreferrer">github.com/maaz2008</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-channel-item">
+                            <div class="channel-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </div>
+                            <div class="channel-meta">
+                                <h4>LinkedIn</h4>
+                                <a href="https://www.linkedin.com/in/muhammad-maaz-283559367" target="_blank" rel="noopener noreferrer">linkedin.com/in/muhammad-maaz-283559367</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-channel-item">
+                            <div class="channel-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="channel-meta">
+                                <h4>Location</h4>
+                                <p>Karachi, Pakistan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Copy Email Feature -->
+                    <div class="copy-email-box">
+                        <span class="copy-email-text" id="emailAddressDisplay">maaazz714@gmail.com</span>
+                        <button class="copy-btn" id="copyEmailBtn" aria-label="Copy Muhammad Maaz's email address to clipboard">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                            Copy Email
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Right: Contact Form -->
+                <div class="contact-form-panel glass-panel reveal-up reveal-delay-2">
+                    <form id="contactForm" novalidate>
+                        <div class="form-group">
+                            <label for="formName">Full Name *</label>
+                            <input type="text" id="formName" name="name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formEmail">Email Address *</label>
+                            <input type="email" id="formEmail" name="email" class="form-control" placeholder="e.g. sarah@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formSubject">Subject *</label>
+                            <input type="text" id="formSubject" name="subject" class="form-control" placeholder="e.g. Project Inquiry / Web Development Role" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="formMessage">Message *</label>
+                            <textarea id="formMessage" name="message" class="form-control" placeholder="Tell me about your project, timeline, and goals..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Send Message
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </button>
+
+                        <!-- Honest status notification container -->
+                        <div class="form-status-alert" id="formStatusAlert" role="alert"></div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================================
+         9. Footer
+         ====================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="monogram-badge">MM</div>
+                    <div>
+                        <div style="font-family: var(--font-heading); font-weight: 700; font-size: 1.125rem;">Muhammad Maaz</div>
+                        <div style="font-size: 0.75rem; color: var(--text-muted);">Full Stack Web Developer</div>
+                    </div>
+                </div>
+
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#services">Services</a>
+                    <a href="#contact">Contact</a>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://github.com/maaz2008" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="GitHub Profile">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/muhammad-maaz-283559367" target="_blank" rel="noopener noreferrer" class="social-icon-link" aria-label="LinkedIn Profile">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="mailto:maaazz714@gmail.com" class="social-icon-link" aria-label="Send direct email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>
+                    &copy; <span id="currentYear">2026</span> Muhammad Maaz. All rights reserved.
+                </div>
+                <a href="#home" class="back-to-top-btn" id="backToTopBtn">
+                    Back to Top
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts: Data store and interactive functionality -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
